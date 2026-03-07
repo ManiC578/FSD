@@ -1,0 +1,23 @@
+#Create an application to setup node JS environment and display “Hello World.”
+
+install Node.js:
+Install nodejs from https://nodejs.org after installing check
+node -v
+npm -v
+
+Project Folder
+mkdir hello_node
+cd hello_node
+npm init -y
+console.log("Hello world")
+node app.js
+
+output: hello world
+
+const http=require('http');
+const server=http.createServer((req,res)=>{
+    res.write("Hello World");
+    res.end();
+});
+server.listen(3000);
+http://localhost:3000
