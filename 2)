@@ -1,0 +1,13 @@
+#Write a Java script to find the factorial of a given number.
+
+const prompt = require("prompt-sync")();
+const num=Number(prompt("Enter a number: "))
+function fact(n) {
+    
+    if(n==0)
+        return 1;
+    else
+        return n*fact(n-1);
+}
+let f=fact(num);
+console.log("Fact of "+num+" is "+f);
