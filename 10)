@@ -1,0 +1,15 @@
+10. Write a Node JS program to demonstrate events and call back functions. 
+
+const events = require('events');
+const eventEmitter = new events.EventEmitter();
+function greet(name) {
+    console.log("Hello " + name);
+}
+function notify() {
+    console.log("Notification received!");
+}
+eventEmitter.on('welcome', greet);
+eventEmitter.on('welcome', notify);
+eventEmitter.emit('welcome', "Deepthi");
+Hello Deepthi
+Notification received
