@@ -11,5 +11,6 @@ function notify() {
 eventEmitter.on('welcome', greet);
 eventEmitter.on('welcome', notify);
 eventEmitter.emit('welcome', "Deepthi");
+
 Hello Deepthi
 Notification received
