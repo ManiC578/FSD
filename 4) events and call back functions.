@@ -1,0 +1,21 @@
+const events = require('events');
+
+// Create EventEmitter object
+const eventEmitter = new events.EventEmitter();
+
+// Callback Function 1
+function greet(name) {
+    console.log("Hello " + name);
+}
+
+// Callback Function 2
+function notify() {
+    console.log("Notification received!");
+}
+
+// Register Event with Callbacks
+eventEmitter.on('welcome', greet);
+eventEmitter.on('welcome', notify);
+
+// Trigger Event
+eventEmitter.emit('welcome', 'bhavya');
