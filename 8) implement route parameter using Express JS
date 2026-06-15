@@ -1,0 +1,15 @@
+const express = require('express');
+const app = express();
+
+// Route Parameter
+app.get('/user/:name', (req, res) => {
+
+    const username = req.params.name;
+
+    res.send("Welcome " + username);
+});
+
+// Server
+app.listen(3000, () => {
+    console.log("Server running on port 3000");
+});
