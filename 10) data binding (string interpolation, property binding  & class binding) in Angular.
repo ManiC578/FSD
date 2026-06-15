@@ -1,0 +1,28 @@
+#app.html
+<h1>Angular Data Binding Example</h1>
+<h2>String Interpolation</h2>
+<p>Welcome {{ name }}</p>
+
+<!-- Property Binding -->
+<h2>Property Binding</h2>
+<input [value]="message">
+
+<!-- Class Binding -->
+<h2>Class Binding</h2>
+<p [class.highlight]="isActive">
+    This text is highlighted using class binding.
+</p>
+
+#app.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  name = 'Bhavyasri';
+  message = 'Angular Data Binding';
+  isActive = true;
+}
