@@ -1,0 +1,22 @@
+#app.ts
+<div>
+  <h2>Two Way Binding Example</h2>
+
+  <label>Enter text:</label>
+
+  <input [(ngModel)]="text">
+
+  <p>You entered: {{ text }}</p>
+</div>
+
+#app.html
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  text = '';
+}
